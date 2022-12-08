@@ -1,0 +1,13 @@
+.vscode/
+.DS_Store
+*.ir
+*.dat
+*.ckpt
+*.pickle
+*.info
+*.json
+*.dot
+*.db
+*.txt
+
+

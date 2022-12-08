@@ -1,0 +1,3 @@
+[submodule "mindspore"]
+	path = mindspore
+	url = https://github.com/mindspore-ai/mindspore.git
