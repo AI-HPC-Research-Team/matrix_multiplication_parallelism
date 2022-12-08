@@ -9,5 +9,6 @@
 *.dot
 *.db
 *.txt
-
-
+*.o
+pangu_alpha/myparallel
+pangu_alpha/megatron
