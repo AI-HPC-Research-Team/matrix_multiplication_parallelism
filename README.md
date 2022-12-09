@@ -1,8 +1,8 @@
 # Matrix Multiplication Parallelism
 
-We implement a new parallel algorithm for matrix multiplication on the mindspore framework, provide more flexible segmentation strategies, and test the proposed parallel algorithm according to the Pangu model. Our algorithm has been merged into the [mindspore1.9](https://github.com/mindspore-ai/mindspore.git) version, and the specific code is implemented in [matmul_info.cc](https://github.com/mindspore -ai/mindspore/blob/r1.9/mindspore/ccsrc/frontend/parallel/ops_info/matmul_info.cc)file.
+We implement a new parallel algorithm for matrix multiplication on the mindspore framework, provide more flexible segmentation strategies, and test the proposed parallel algorithm according to the Pangu model. Our algorithm has been merged into the [mindspore1.9](https://github.com/mindspore-ai/mindspore.git) version, and the specific code is implemented in [matmul_info.cc](https://github.com/mindspore -ai/mindspore/blob/r1.9/mindspore/ccsrc/frontend/parallel/ops_info/matmul_info.cc) file.
 
-## 算法介绍
+Introduction
 
 In our  algorithm, matrices are divided into $m \times n $ blocks. It's not necessary that $m=n$ , so that GPU resources can be fully utilized. After performing the parallel matrix multiplication, the operation result matrix is still divided according to $m \times n$ blocks, without rearranging, reducing communication requirements.
 
@@ -26,7 +26,7 @@ mindspore 1.9.0 or higher version
 
 ## Train
 
-We have modified the parallel strategy of the model. When running the distributed training script, the above parallel strategy will be executed我们修改了模型的切分策略，当运行分布训练脚本时，会执行上述切分策
+We have modified the parallel strategy of the model. When running the distributed training script, the above parallel strategy will be executed.
 
 ```
 bash scripts/run_distribute_train.sh DATASET RANK_TABLE RANK_SIZE TYPE MODE STAGE_NUM MICRO_SIZE PER_BATCH RANK_START
