@@ -11,11 +11,13 @@ For the multiplication of two matrices $A$, $B$, $A\times B=C$, where $A\in \mat
 ![1670469977985](image/README/1670469977985.png)
 
 We provide a new parallel strategy for the parallel training of transformers. Taking Pangu-alpha as an example, its parallel strategy is shown in the figure below:
+We provide a new parallel strategy for the parallel training of transformers. Taking Pangu-alpha as an example, its parallel strategy is shown in the figure below:
 
 ![1670486295971](image/README/1670486295971.png)
 
 ## Installation
 
+First, you need to install the mindspore Ascend version or GPU version, and then install the following python libraries according to the [Pangu-alpha](https://gitee.com/mindspore/models.git) guidelines.
 First, you need to install the mindspore Ascend version or GPU version, and then install the following python libraries according to the [Pangu-alpha](https://gitee.com/mindspore/models.git) guidelines.
 
 mindspore 1.9.0 or higher version
@@ -26,6 +28,7 @@ mindspore 1.9.0 or higher version
 
 ## Train
 
+We have modified the parallel strategy of the model. When running the distributed training script, the above parallel strategy will be executed.
 We have modified the parallel strategy of the model. When running the distributed training script, the above parallel strategy will be executed.
 
 ```sh
